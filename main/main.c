@@ -2,13 +2,12 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+#include "simple_sample.h"
 
 void app_main(void)
 {
-    int i = 0;
+    printf_sample();
     while (1) {
-        printf("[%d] Hello world!\n", i);
-        i++;
         vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
 }
